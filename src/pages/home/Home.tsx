@@ -1,10 +1,11 @@
 import React from 'react';
 import './home.css';
+import '../../assets/fonts/fonts.css'
 
 function Home() {
   return (
     <div className="container">
-        <p>hi</p>
+        <h1 className='suse-bold'>hi</h1>
     </div>
   );
 }
