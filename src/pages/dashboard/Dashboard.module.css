@@ -1,0 +1,35 @@
+.container {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.header {
+  text-align: center;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: black;
+  flex: 1 1 90%;
+  min-height: 30rem;
+  margin: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    flex: 1 1 22%;
+    max-width: 22%;
+  }
+}
