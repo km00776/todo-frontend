@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
+import "./index.css";
 
+import "./assets/fonts/fonts.css";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );

@@ -1,35 +1,35 @@
 :global(html, body) {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 :global(#root) {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-    background-color: #d84315;
-    min-height: 100vh; /* Ensure full viewport height */
-    display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    flex-direction: column;
+  background-color: #d84315;
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  flex-direction: column;
 }
 
 .heading {
-    font-family: 'SUSE', sans-serif;
-    font-weight: 800;
-    color: #f1f1f1;
-    font-size: 74px;
-    text-align: center;
+  font-family: "SUSE", sans-serif;
+  font-weight: 800;
+  color: #f1f1f1;
+  font-size: 74px;
+  text-align: center;
 }
 
 .buttonStyle {
-    background-color: #bf360c !important;
-    color: #ffffff;
-    font-family: 'SUSE';
-    font-weight: 600;
-    font-size: 16px;
+  background-color: #bf360c !important;
+  color: #ffffff;
+  font-family: "SUSE";
+  font-weight: 600;
+  font-size: 16px;
 }
