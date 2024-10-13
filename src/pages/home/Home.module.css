@@ -18,6 +18,11 @@
   flex-direction: column;
 }
 
+.row {
+  justify-content: "space-between";
+  backgroundcolor: yellow;
+}
+
 .heading {
   font-family: "SUSE", sans-serif;
   font-weight: 800;
