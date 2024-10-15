@@ -1,6 +1,6 @@
-import { TodoProps } from "../types/todoTypes";
+import { PostTodo, TodoProps } from "../types/todoTypes";
 import { useCallback, useState } from "react";
-import { createTodo, fetchTodos } from "../services/todoService";
+import { createTodo, fetchTodos, deleteTodo } from "../services/todoService";
 
 export const useTodos = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -21,7 +21,7 @@ export const useTodos = () => {
     }
   }, []);
 
-  const postTodo = useCallback(async (todo: TodoProps) => {
+  const postTodo = useCallback(async (todo: PostTodo) => {
     setLoading(true);
     try {
       const data = await createTodo(todo); // Assuming this returns the created todo
@@ -35,5 +35,19 @@ export const useTodos = () => {
     }
   }, []);
 
-  return { getTodos, todos, loading, error, postTodo };
+  const removeTodo = useCallback(async (todoId: string) => {
+    setLoading(true);
+    try {
+      await deleteTodo(todoId); // Assuming this returns the created todo
+      setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== todoId)); // Add the new todo to the list
+    } catch (error) {
+      setError(
+        error instanceof Error ? error.message : "An unknown error occurred"
+      );
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  return { getTodos, todos, loading, error, postTodo, removeTodo };
 };
